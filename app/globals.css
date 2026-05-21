@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+  }
+
+  body {
+    @apply bg-white text-text-primary font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-bold;
+  }
+}
+
+@layer components {
+  .prose-research {
+    @apply max-w-none text-text-primary leading-relaxed;
+  }
+
+  .prose-research h2 {
+    @apply mt-10 mb-4 text-2xl text-navy-dark;
+  }
+
+  .prose-research h3 {
+    @apply mt-8 mb-3 text-xl text-navy-mid;
+  }
+
+  .prose-research p {
+    @apply mb-4 text-text-muted;
+  }
+
+  .prose-research ul {
+    @apply mb-4 list-disc pl-6 text-text-muted;
+  }
+
+  .prose-research li {
+    @apply mb-2;
+  }
+
+  .prose-research strong {
+    @apply font-semibold text-text-primary;
+  }
+
+  .hero-grid {
+    background-image: radial-gradient(
+        circle at 1px 1px,
+        rgba(255, 255, 255, 0.08) 1px,
+        transparent 0
+      ),
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 24px 24px, 48px 48px, 48px 48px;
+  }
+}
